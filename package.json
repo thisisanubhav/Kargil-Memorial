@@ -1,0 +1,28 @@
+{
+  "name": "kargil-vijay-diwas-memorial",
+  "description": "An interactive cinematic memorial experience for Kargil Vijay Diwas",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.182.0",
+    "three-mesh-bvh": "^0.9.13"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/three": "^0.182.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.0.6"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
+}

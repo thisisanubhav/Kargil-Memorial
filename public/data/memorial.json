@@ -1,0 +1,163 @@
+{
+  "plaque": {
+    "lines": ["KARGIL VIJAY DIWAS", "IN ETERNAL MEMORY OF THE BRAVE"]
+  },
+  "fallen": {
+    "count": 527,
+    "lines": [
+      "TO ALL WHO FELL",
+      "To the five hundred and twenty-seven who never came down from these mountains,",
+      "and to every soldier of the Indian Armed Forces —",
+      "who had the courage to do what most never could,",
+      "who chose to stand for this country when it asked for everything,",
+      "and who gave all their tomorrows for our today.",
+      "Some names are carved in stone. All of them are carved in the heart of the nation."
+    ]
+  },
+  "entries": [
+    {
+      "name": "Vikram Batra",
+      "rank": "Captain",
+      "award": "Param Vir Chakra",
+      "quote": "Yeh Dil Maange More!",
+      "summary": "13 JAK Rifles. Led the recapture of Point 5140 and volunteered again for Point 4875. He cleared enemy positions at close quarters and fell shielding a fellow officer, on 7 July 1999."
+    },
+    {
+      "name": "Manoj Kumar Pandey",
+      "rank": "Lieutenant",
+      "award": "Param Vir Chakra",
+      "quote": "If death strikes before I prove my blood, I swear I will kill death.",
+      "summary": "1/11 Gorkha Rifles. Led his platoon up the icy cliffs of Khalubar in Batalik, destroying bunker after bunker. Gravely wounded, he pressed the assault to its end and fell at the final bunker, on 3 July 1999."
+    },
+    {
+      "name": "Yogendra Singh Yadav",
+      "rank": "Grenadier",
+      "award": "Param Vir Chakra",
+      "quote": "The cliff had to be climbed, so it was climbed.",
+      "summary": "18 Grenadiers, Ghatak Platoon. Scaled a sheer face of Tiger Hill under direct fire to secure the rope route, took over fifteen wounds, and still silenced the enemy positions above. He survived, receiving the Param Vir Chakra at nineteen — its youngest recipient."
+    },
+    {
+      "name": "Sanjay Kumar",
+      "rank": "Rifleman",
+      "award": "Param Vir Chakra",
+      "quote": "Where my unit was asked to go, I went first.",
+      "summary": "13 JAK Rifles. Leading scout in the assault on Area Flat Top of Point 4875. Wounded, he charged an enemy machine-gun position and turned its own gun upon the fleeing enemy. He came through the war, one of its surviving Param Vir Chakra recipients."
+    },
+    {
+      "name": "Anuj Nayyar",
+      "rank": "Captain",
+      "award": "Maha Vir Chakra",
+      "quote": "He led from the front, bunker by bunker.",
+      "summary": "17 Jat. Took command of his company's assault on Pimple II when his company commander was injured, destroying three enemy bunkers before falling at the fourth, on 7 July 1999."
+    },
+    {
+      "name": "Rajesh Singh Adhikari",
+      "rank": "Major",
+      "award": "Maha Vir Chakra",
+      "quote": "The task will be done first; I will come down after.",
+      "summary": "18 Grenadiers. In the first assault on Tololing, wounded by machine-gun fire, he refused evacuation and led on until he fell, on 30 May 1999. Tololing was taken days later, on the path he had opened."
+    },
+    {
+      "name": "Padmapani Acharya",
+      "rank": "Major",
+      "award": "Maha Vir Chakra",
+      "quote": "Dying for one's country is an honour.",
+      "summary": "2 Rajputana Rifles. Led his company across the fire-swept slopes of the Three Pimples complex above Drass, crawling through artillery fire to silence the enemy's trenches. He fell within reach of the objective, on 28 June 1999."
+    },
+    {
+      "name": "Neikezhakuo Kenguruse",
+      "rank": "Captain",
+      "award": "Maha Vir Chakra",
+      "quote": "Sir, I will go barefoot.",
+      "summary": "2 Rajputana Rifles. On the night assault on Area Lone Hill, he kicked off his boots to grip the ice-slick rock, climbed a sheer cliff under fire, and cleared the enemy's guns before he fell, on 28 June 1999."
+    },
+    {
+      "name": "R. Vishwanathan",
+      "rank": "Lieutenant Colonel",
+      "award": "Vir Chakra",
+      "location": "summit",
+      "quote": "Second-in-command of his battalion; first up the slope.",
+      "summary": "18 Grenadiers. Second-in-command of the battalion, he led the earliest assaults on Tololing from the front and was mortally wounded pressing the attack, in June 1999 — the highest-ranking Indian officer to fall in the war."
+    },
+    {
+      "name": "M. Saravanan",
+      "rank": "Major",
+      "award": "Vir Chakra",
+      "location": "summit",
+      "quote": "Among the first to climb, and among the first to fall.",
+      "summary": "1 Bihar. In the war's opening days he led the assault up Jubar Ridge in Batalik, destroying enemy positions and fighting on despite grievous wounds until he fell, on 29 May 1999. The ridge was retaken in his name."
+    },
+    {
+      "name": "Vivek Gupta",
+      "rank": "Major",
+      "award": "Maha Vir Chakra",
+      "location": "summit",
+      "quote": "Tololing would be taken, whatever it asked of him.",
+      "summary": "2 Rajputana Rifles. Commanded the assault that finally took Tololing Top on 13 June 1999 — the war's first great turning point. Wounded twice, he fought to the crest and fell upon the objective he had won."
+    },
+    {
+      "name": "Sonam Wangchuk",
+      "rank": "Major",
+      "award": "Maha Vir Chakra",
+      "location": "summit",
+      "quote": "The mountains were home ground; he defended them as home.",
+      "summary": "Ladakh Scouts. In the war's opening days he led his column up the icebound heights of the Chorbat La sector and threw the intruders off the ridge line, securing the pass for the campaign that followed. He came through the war he helped win and rose to Colonel; he passed away in 2026, honoured by the nation he defended."
+    },
+    {
+      "name": "Balwan Singh",
+      "rank": "Lieutenant",
+      "award": "Maha Vir Chakra",
+      "location": "summit",
+      "quote": "Eighteen hours of cliff, and the summit at the end of it.",
+      "summary": "18 Grenadiers, Ghatak Platoon. Led the assault team that scaled the unexpected eastern approach to Tiger Hill on 3–4 July 1999. Though seriously wounded, he pressed on to the top. He survived his wounds and continued to serve the Army he honoured."
+    },
+    {
+      "name": "Digendra Kumar",
+      "rank": "Naik",
+      "award": "Maha Vir Chakra",
+      "location": "summit",
+      "quote": "Bunker by bunker, the hill was returned.",
+      "summary": "2 Rajputana Rifles. In the assault on Tololing he silenced enemy bunkers in succession despite his wounds, clearing the way for the capture of the ridge. He came down from Tololing alive, his courage already legend."
+    },
+    {
+      "name": "Keishing Clifford Nongrum",
+      "rank": "Lieutenant",
+      "award": "Maha Vir Chakra",
+      "location": "summit",
+      "quote": "He charged alone so his men could rise.",
+      "summary": "12 JAK Light Infantry. At Point 4812 on 1 July 1999, with his column pinned on open rock, he charged the bunkers alone, silenced their guns with grenades and bare courage, and fell at the final position."
+    },
+    {
+      "name": "Haneef-u-ddin",
+      "rank": "Captain",
+      "award": "Vir Chakra",
+      "location": "summit",
+      "quote": "He held the highest, coldest ground so others could hold the line.",
+      "summary": "11 Rajputana Rifles. In the Turtuk sub-sector on 6 June 1999, at over 5,500 metres, he led his men against entrenched positions and fell covering their advance. The post he defended now bears his name — Sub-sector Haneef."
+    },
+    {
+      "name": "Vijayant Thapar",
+      "rank": "Captain",
+      "award": "Vir Chakra",
+      "location": "summit",
+      "quote": "Come and see for yourself where the Indian Army fought for your tomorrow.",
+      "summary": "2 Rajputana Rifles. Fought at Tololing and fell leading the assault on Knoll on 28 June 1999, aged 22. His last letter home asked only that his family visit the place where he fought."
+    },
+    {
+      "name": "Ajay Ahuja",
+      "rank": "Squadron Leader",
+      "award": "Vir Chakra",
+      "location": "summit",
+      "quote": "He circled back for his brother in the sky.",
+      "summary": "Indian Air Force. On 27 May 1999, after his wingman ejected over hostile ground, he stayed over the area to fix the position for rescue. His MiG-21 was brought down; he did not abandon the search."
+    },
+    {
+      "name": "Saurabh Kalia",
+      "rank": "Captain",
+      "award": "Never Forgotten",
+      "location": "summit",
+      "quote": "The first to report the intrusion; among the first to give everything.",
+      "summary": "4 Jat. Led the patrol to Bajrang Post in Kaksar on 15 May 1999 with Sepoys Arjun Ram, Bhanwar Lal Bagaria, Bhika Ram, Moola Ram and Naresh Singh. Captured and brutally treated, none of the six betrayed their post, and none came home alive. Their names are remembered together."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="An interactive memorial experience honouring the heroes of the Kargil War — Kargil Vijay Diwas." />
+    <meta name="theme-color" content="#05070d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kargil Vijay Diwas — An Interactive Tribute" />
+    <meta
+      property="og:description"
+      content="Walk a moonlit Himalayan valley, meet the heroes of Kargil, and climb to the eternal flame. An interactive digital memorial."
+    />
+    <meta property="og:image" content="/social-preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Kargil Vijay Diwas — A Memorial</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='5.33' fill='%23ff9933'/%3E%3Crect y='5.33' width='16' height='5.33' fill='%23ffffff'/%3E%3Crect y='10.66' width='16' height='5.34' fill='%23138808'/%3E%3Ccircle cx='8' cy='8' r='2' fill='none' stroke='%23000080' stroke-width='0.7'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <div id="app" aria-label="Memorial experience"></div>
+
+    <div id="loading-screen" role="status" aria-live="polite">
+      <div class="loading-content">
+        <h1 class="loading-title">Kargil Vijay Diwas</h1>
+        <p class="loading-subtitle">In remembrance of the brave</p>
+        <div
+          class="loading-bar"
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+          aria-label="Loading progress"
+        >
+          <div class="loading-bar-fill"></div>
+        </div>
+        <p class="loading-percent" aria-hidden="true">0%</p>
+        <p class="loading-status">Preparing the experience…</p>
+      </div>
+    </div>
+
+    <div id="intro-overlay" aria-hidden="true">
+      <div class="intro-veil"></div>
+      <div class="intro-titles">
+        <h1 class="intro-line intro-line--title">Kargil Vijay Diwas</h1>
+        <p class="intro-line intro-line--date">26 July</p>
+        <p class="intro-line intro-line--sub">An Interactive Tribute</p>
+      </div>
+      <p class="intro-skip">press any key to skip</p>
+    </div>
+
+    <aside id="info-panel" aria-live="polite" aria-atomic="true"></aside>
+
+    <div id="summit-message" aria-live="polite">
+      <p class="summit-line summit-line--first" hidden>They climbed so that India could stand tall.</p>
+      <p class="summit-line summit-line--second" hidden>
+        In remembrance of the courage and sacrifice of the Indian Armed Forces during the Kargil
+        War.
+      </p>
+    </div>
+
+    <div id="movement-hint" role="note" aria-label="Movement instructions">
+      <span class="hint-line">
+        Click to walk&ensp;·&ensp;<kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrow keys to
+        move&ensp;·&ensp;mouse to look&ensp;·&ensp;<kbd>Esc</kbd> to release
+      </span>
+    </div>
+
+    <noscript>
+      <div class="noscript-message">
+        This memorial experience requires JavaScript to be enabled.
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
