@@ -17,6 +17,15 @@ export interface AudioConfig {
     readonly baseVolume: number;
     readonly fadeTau: number;
   };
+  readonly music: {
+    /** Kept beneath the environmental ambience so the memorial stays contemplative. */
+    readonly volume: number;
+    /** Seconds each harmony is allowed to breathe before the next arrives. */
+    readonly chordDuration: number;
+    /** Low-pass cutoff keeps the synthesized pad warm and distant. */
+    readonly filterFrequency: number;
+    readonly harmonies: readonly (readonly number[])[];
+  };
   readonly footsteps: {
     readonly volume: number;
     readonly fadeInTau: number;
@@ -38,6 +47,18 @@ export const audioConfig: AudioConfig = {
   master: { fadeTau: 1.6 },
   wind: { baseVolume: 0.4, altitudeBoost: 0.25, fadeTau: 0.9 },
   snow: { baseVolume: 0.3, fadeTau: 0.9 },
+  music: {
+    volume: 0.075,
+    chordDuration: 14,
+    filterFrequency: 720,
+    // D minor → B-flat → F → C, voiced as a slow, unresolved remembrance theme.
+    harmonies: [
+      [73.42, 110, 146.83, 220],
+      [58.27, 116.54, 146.83, 233.08],
+      [87.31, 130.81, 174.61, 261.63],
+      [65.41, 98, 130.81, 196],
+    ],
+  },
   footsteps: {
     volume: 0.55,
     fadeInTau: 0.12,
