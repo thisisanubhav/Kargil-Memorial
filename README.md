@@ -4,6 +4,8 @@ An interactive cinematic memorial honouring the heroes of the Kargil War. This i
 
 Made by Anubhav. [Visit the live memorial](https://kargil-war-memorial.vercel.app/).
 
+[Watch the 20-second demo with music](docs/demo.mp4).
+
 **The experience:** a slow aerial introduction descends into the valley. You walk an avenue of honour where each stone carries the name, award, words, and story of a real Kargil hero — revealed gently as you approach. A long ceremonial stairway climbs to the summit memorial: the flame, the inscription wall, and the flag. Arriving there is honoured once, with two lines of remembrance. You may stay as long as you wish. Wind, snow, footsteps, and the song “Tiranga” accompany the visit after your first interaction.
 
 ## Snapshots
