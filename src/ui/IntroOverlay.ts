@@ -1,5 +1,5 @@
 /**
- * DOM layer of the cinematic introduction: the black veil, the three
+ * DOM layer of the cinematic introduction: the black veil, the two
  * title lines and the skip hint. All fading is CSS transitions; this
  * class only flips classes at the cue times it is given.
  */
