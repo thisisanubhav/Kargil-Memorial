@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { audioConfig, type AudioConfig } from '@/config/audio';
 import type { AudioKey } from '@/config/assets';
 import type { AssetManager } from '@/core/AssetManager';
+import { AmbientScore } from './AmbientScore';
 import { AudioChannel } from './AudioChannel';
 
 export interface VisitorAudioState {
@@ -20,9 +21,9 @@ function damp(current: number, target: number, tau: number, delta: number): numb
 
 /**
  * The soundscape: looping wind and snow ambience blended by where the
- * visitor stands, and footsteps that exist only while walking. Channels
- * are keyed by the typed asset registry, so growing the soundscape is one
- * registry entry plus one mix rule.
+ * visitor stands, footsteps that exist only while walking, and a quiet
+ * procedural score beneath them. Recorded channels are keyed by the typed
+ * asset registry; the score is synthesized in the listener's audio context.
  *
  * Browsers keep audio suspended until the page is touched; the system
  * arms itself on the first pointer or key input (the pointer-lock click
@@ -33,6 +34,7 @@ export class AudioSystem {
   private readonly assets: AssetManager;
   private readonly config: AudioConfig;
   private readonly channels = new Map<AudioKey, AudioChannel>();
+  private readonly score: AmbientScore;
 
   private masterGain = 0;
   private unlocked = false;
@@ -43,6 +45,7 @@ export class AudioSystem {
     this.assets = assets;
     this.config = config;
     camera.add(this.listener);
+    this.score = new AmbientScore(this.listener, config.music);
 
     window.addEventListener('pointerdown', this.handleFirstInput);
     window.addEventListener('keydown', this.handleFirstInput);
@@ -109,12 +112,14 @@ export class AudioSystem {
     for (const channel of this.channels.values()) {
       channel.update(delta, this.masterGain);
     }
+    this.score.update(delta, this.masterGain);
   }
 
   private beginPlayback(): void {
     for (const channel of this.channels.values()) {
       channel.start();
     }
+    this.score.start();
   }
 
   private readonly handleFirstInput = (): void => {
@@ -149,6 +154,7 @@ export class AudioSystem {
       channel.dispose();
     }
     this.channels.clear();
+    this.score.dispose();
     this.listener.removeFromParent();
   }
 }
