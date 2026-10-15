@@ -2,18 +2,30 @@
 
 An interactive cinematic memorial honouring the heroes of the Kargil War. This is not a game — it is a quiet, first-person space for remembrance: a moonlit Himalayan valley, a trail of memorial stones, and a summit with an eternal flame beneath the Tricolour.
 
-**The experience:** a slow aerial introduction descends into the valley. You walk an avenue of honour where each stone carries the name, award, words, and story of a real Kargil hero — revealed gently as you approach. A long ceremonial stairway climbs to the summit memorial: the flame, the inscription wall, and the flag. Arriving there is honoured once, with two lines of remembrance. You may stay as long as you wish.
+Made by Anubhav. [Visit the live memorial](https://kargil-war-memorial.vercel.app/).
+
+**The experience:** a slow aerial introduction descends into the valley. You walk an avenue of honour where each stone carries the name, award, words, and story of a real Kargil hero — revealed gently as you approach. A long ceremonial stairway climbs to the summit memorial: the flame, the inscription wall, and the flag. Arriving there is honoured once, with two lines of remembrance. You may stay as long as you wish. Wind, snow, footsteps, and the song “Tiranga” accompany the visit after your first interaction.
+
+## Snapshots
+
+Moonlit valley and the approach to the memorial:
+
+![Moonlit Himalayan valley with the memorial in the distance](docs/screenshots/valley-overview.jpg)
+
+The summit memorial, eternal flame, and Tricolour:
+
+![Summit memorial with its eternal flame, flag, and inscription wall](docs/screenshots/summit-memorial.jpg)
 
 ## Running
 
 ```bash
-npm install
-npm run dev      # local development (debug mode on)
+npm ci
+npm run dev      # local development at http://localhost:5173/ (debug mode on)
 npm run build    # type-check + production build → dist/
 npm run preview  # serve the production build locally
 ```
 
-Requires Node 18+. Deploys to Vercel as a static site; `vercel.json` sets immutable caching for heavy assets.
+Requires Node 18+ and a browser with WebGL. The `main` branch of `thisisanubhav/Kargil-Memorial` deploys to Vercel as a static site; `vercel.json` sets caching for large assets.
 
 ## Controls
 
@@ -37,7 +49,7 @@ src/
                            eased walk, terrain following, collision
   cinematic/               Intro fly-through, summit arrival moment
   journey/                 Proximity reveals along the trail
-  audio/                   Looping ambience + footsteps, gesture-unlocked
+  audio/                   Looping ambience, footsteps, and music; gesture-unlocked
   ui/                      Loading screen, info panel, hints, overlays
   data/                    Typed, validated loader for memorial.json
   config/                  All tunables, one module per domain
@@ -57,7 +69,7 @@ Principles held throughout:
 
 Models are DRACO-compressed with WebP textures (`gltf-transform optimize`, with join/flatten/simplify disabled — runtime placement depends on the node structure). The DRACO decoder is self-hosted under `public/draco/`. Asset paths live only in `src/config/assets.ts`.
 
-The terrain, rocks, trees, and moon models and the ambient audio are third-party assets bundled in `public/`; verify their licences before redistributing this repository.
+The terrain, rocks, trees, and moon models and the ambient audio are third-party assets bundled in `public/`. The “Tiranga” recording in `public/audio/tiranga.mp3` is by T-Series and appears in *Yodha*; rights remain with their respective holders. Verify the rights for all bundled media before redistributing or publicly hosting it.
 
 ## Accessibility
 
