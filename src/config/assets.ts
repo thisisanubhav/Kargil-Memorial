@@ -25,6 +25,7 @@ export const AUDIO_REGISTRY = {
   wind: { url: '/audio/wind.mp3', label: 'mountain wind', sizeHintMb: 0.6 },
   snow: { url: '/audio/snow.m4a', label: 'falling snow', sizeHintMb: 4.2 },
   footsteps: { url: '/audio/footsteps.mp3', label: 'footsteps', sizeHintMb: 0.2 },
+  music: { url: '/audio/tiranga.mp3', label: 'Tiranga', sizeHintMb: 6.6 },
 } as const satisfies Record<string, AssetDescriptor>;
 
 export type ModelKey = keyof typeof MODEL_REGISTRY;
