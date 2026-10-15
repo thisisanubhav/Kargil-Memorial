@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import { audioConfig, type AudioConfig } from '@/config/audio';
 import type { AudioKey } from '@/config/assets';
 import type { AssetManager } from '@/core/AssetManager';
-import { AmbientScore } from './AmbientScore';
 import { AudioChannel } from './AudioChannel';
 
 export interface VisitorAudioState {
@@ -22,8 +21,7 @@ function damp(current: number, target: number, tau: number, delta: number): numb
 /**
  * The soundscape: looping wind and snow ambience blended by where the
  * visitor stands, footsteps that exist only while walking, and a quiet
- * procedural score beneath them. Recorded channels are keyed by the typed
- * asset registry; the score is synthesized in the listener's audio context.
+ * music track beneath them. Channels are keyed by the typed asset registry.
  *
  * Browsers keep audio suspended until the page is touched; the system
  * arms itself on the first pointer or key input (the pointer-lock click
@@ -34,7 +32,6 @@ export class AudioSystem {
   private readonly assets: AssetManager;
   private readonly config: AudioConfig;
   private readonly channels = new Map<AudioKey, AudioChannel>();
-  private readonly score: AmbientScore;
 
   private masterGain = 0;
   private unlocked = false;
@@ -45,7 +42,6 @@ export class AudioSystem {
     this.assets = assets;
     this.config = config;
     camera.add(this.listener);
-    this.score = new AmbientScore(this.listener, config.music);
 
     window.addEventListener('pointerdown', this.handleFirstInput);
     window.addEventListener('keydown', this.handleFirstInput);
@@ -54,7 +50,7 @@ export class AudioSystem {
 
   /** Loads every buffer and builds the channels. Failures degrade to warnings. */
   async start(): Promise<void> {
-    const keys: AudioKey[] = ['wind', 'snow', 'footsteps'];
+    const keys: AudioKey[] = ['wind', 'snow', 'footsteps', 'music'];
     const results = await Promise.allSettled(keys.map((key) => this.assets.loadAudio(key)));
 
     if (this.disposed) return;
@@ -96,6 +92,12 @@ export class AudioSystem {
       snow.fadeTau = this.config.snow.fadeTau;
     }
 
+    const music = this.channels.get('music');
+    if (music) {
+      music.target = this.config.music.volume;
+      music.fadeTau = this.config.music.fadeTau;
+    }
+
     const footsteps = this.channels.get('footsteps');
     if (footsteps) {
       const speedRatio = THREE.MathUtils.clamp(state.speed / state.walkSpeed, 0, 1);
@@ -112,14 +114,12 @@ export class AudioSystem {
     for (const channel of this.channels.values()) {
       channel.update(delta, this.masterGain);
     }
-    this.score.update(delta, this.masterGain);
   }
 
   private beginPlayback(): void {
     for (const channel of this.channels.values()) {
       channel.start();
     }
-    this.score.start();
   }
 
   private readonly handleFirstInput = (): void => {
@@ -154,7 +154,6 @@ export class AudioSystem {
       channel.dispose();
     }
     this.channels.clear();
-    this.score.dispose();
     this.listener.removeFromParent();
   }
 }
