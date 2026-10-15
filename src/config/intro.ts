@@ -43,8 +43,7 @@ export const introConfig: IntroConfig = {
 
   lines: [
     { show: 4.0, hide: 10.0 },
-    { show: 8.5, hide: 13.5 },
-    { show: 12.5, hide: 17.5 },
+    { show: 9.0, hide: 16.0 },
   ],
   skipHintAt: 2,
 };
