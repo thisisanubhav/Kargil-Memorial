@@ -1,6 +1,6 @@
-# Kargil Vijay Diwas — An Interactive Tribute
+# Kargil War Memorial — An Interactive Tribute
 
-An interactive cinematic memorial honouring the heroes of the Kargil War (26 July). This is not a game — it is a quiet, first-person space for remembrance: a moonlit Himalayan valley, a trail of memorial stones, and a summit with an eternal flame beneath the Tricolour.
+An interactive cinematic memorial honouring the heroes of the Kargil War. This is not a game — it is a quiet, first-person space for remembrance: a moonlit Himalayan valley, a trail of memorial stones, and a summit with an eternal flame beneath the Tricolour.
 
 **The experience:** a slow aerial introduction descends into the valley. You walk an avenue of honour where each stone carries the name, award, words, and story of a real Kargil hero — revealed gently as you approach. A long ceremonial stairway climbs to the summit memorial: the flame, the inscription wall, and the flag. Arriving there is honoured once, with two lines of remembrance. You may stay as long as you wish.
 
